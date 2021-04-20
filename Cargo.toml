@@ -1,0 +1,19 @@
+[package]
+name = "ls"
+version = "0.1.0"
+authors = ["Gregory Ochs <gao96@yahoo.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+structopt = { version = "0.3" }
+
+[[bin]]
+name = "ls"
+
+[profile.release]
+opt-level = "s"
+debug = false
+lto = true
+panic = "abort"
